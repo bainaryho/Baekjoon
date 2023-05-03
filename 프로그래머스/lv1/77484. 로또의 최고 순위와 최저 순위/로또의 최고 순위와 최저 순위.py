@@ -6,7 +6,5 @@ def solution(lottos, nums):
     for i in range(len(lottos)):
         if lottos[i] in nums:
             count += 1
-            
-    answer = [rank[count],rank[count-error]]
     
-    return answer
+    return [rank[count],rank[count-error]]
