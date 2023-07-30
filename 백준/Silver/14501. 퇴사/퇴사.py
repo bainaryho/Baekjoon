@@ -13,10 +13,10 @@ money = [0 for i in range(n + 1)]
 for i in range(n):
     T[i], P[i] = map(int, input().split())
 
-for i in range(len(T) - 2, -1, -1):  # 역순으로 진행
+for i in range(n-1, -1, -1):  # 역순으로 진행
     if T[i] + i <= n:  # 일수를 넘는지 확인
         money[i] = max(P[i] + money[i + T[i]], money[i+1])
     else:
-        money[i] = money[i+1]
-        
+        money[i] = money[i+1] #일수가 넘어갔으면
+
 print(money[0])
