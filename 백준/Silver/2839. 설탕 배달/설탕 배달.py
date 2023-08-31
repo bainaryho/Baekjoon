@@ -1,14 +1,18 @@
-num = int(input())
-count = 0
+import sys
 
-while num >= 0:
-  if num % 5 == 0:
-    count += int(num // 5)
-    print(count)
-    break
-  
-  num -= 3
-  count += 1
-  
+n = int(sys.stdin.readline())
+result = 0
+
+while n > 0:
+    if n % 5 == 0:
+        result += n // 5
+        n = 0
+        break
+    else:
+        n -= 3
+        result += 1
+
+if n:
+    print(-1)
 else:
-  print(-1)
+    print(result)
