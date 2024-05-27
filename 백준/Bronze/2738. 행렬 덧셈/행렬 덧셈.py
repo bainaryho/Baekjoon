@@ -1,6 +1,5 @@
 N, M = map(int, input().split())
-A = []
-B = []
+A,B = [],[]
 
 for i in range(N):
     A.append(list(map(int, input().split())))
