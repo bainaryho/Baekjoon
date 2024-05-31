@@ -1,8 +1,3 @@
-N = int(input())
-num_list = []
-for _ in range(N):
-    num_list.append(int(input()))
+num_list = [int(input()) for _ in range(int(input()))]
 num_list.sort()
-for num in num_list:
-    print(num)
-    
+print('\n'.join(map(str, num_list)))
