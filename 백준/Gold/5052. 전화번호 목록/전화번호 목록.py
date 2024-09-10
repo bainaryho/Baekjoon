@@ -1,7 +1,7 @@
 def is_consistent(phone_numbers):
     phone_numbers.sort()
     for i in range(len(phone_numbers) - 1):
-        if phone_numbers[i + 1].startswith(phone_numbers[i]):
+        if phone_numbers[i + 1][:len(phone_numbers[i])] == phone_numbers[i]:
             return "NO"
     return "YES"
 
