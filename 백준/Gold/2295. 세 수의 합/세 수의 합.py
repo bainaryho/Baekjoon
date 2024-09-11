@@ -1,7 +1,9 @@
 num = int(input())
-arr = [int(input()) for _ in range(num)]
+#arr = [int(input()) for _ in range(num)]
+arr = []
+for _ in range(num):
+    arr.append(int(input()))
 arr.sort()
-
 arr_sum = set()
 
 # 두 수의 합을 구하는데 중복 계산을 없앰
